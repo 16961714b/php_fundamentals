@@ -1,0 +1,26 @@
+<?php
+$tuts_sites = array('nettuts+', 'psdtuts+', 'webdesigntuts+', 'wptuts+');
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+</head>
+<body>
+	<h1>Tuts+ Sites</h1>
+	<ul>
+		<?php foreach($tuts_sites as $site) {
+			echo $site;
+		}
+		/*
+		foreach($tuts_sites as $site) is a loop
+		for each item within the $tuts_sites array, 
+		how do we want to refer to each one of those?
+		for each item within the $tuts_sites array,
+		assign its value to a variable $site 
+		*/
+		?>
+	</ul>
+</body>
+</html>

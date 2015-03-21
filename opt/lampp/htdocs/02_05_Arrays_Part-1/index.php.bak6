@@ -1,0 +1,49 @@
+<?php
+//$tuts_sites = array('nettuts+', 'psdtuts+', 'webdesigntuts+', 'wptuts+', 'mobiletuts+');
+//$tuts_sites = ['nettuts+', 'psdtuts+', 'webdesigntuts+', 'wptuts+', 'mobiletuts+'];
+$tuts_sites = array(
+	'nettuts' => 'http://net.tutsplus.com/',
+	'psdtuts' => 'http://psd.tutsplus.com/',
+	'wptuts' => 'http://wp.tutsplus.com/',
+//thit is an associative array - connecting the name of tuts sites to its urls
+);
+
+?>
+
+<html>
+<head>
+	<title>Arrays</title>
+</head>
+<body>
+	<h1>Tuts+ Sites</h1>
+	<ul>
+		<?php 
+
+		// foreach($tuts_sites as $site) {
+		// 	echo "<li>$site</li>";
+		// }
+
+		/*
+		use ctrl + / to comment out several lines of code in Sublime Text 2
+		see https://stackoverflow.com/questions/11443857/shortcut-to-comment-ou
+		t-a-block-of-code-with-sublime-text
+		*/
+
+		//foreach ($tuts_sites as $site => $path)
+		foreach ($tuts_sites as $name => $url) {
+			//echo "<li><a href="$url">$name</a></li>";
+			echo "<li><a href='$url'>$name</a></li>";
+			/*
+			NOTICE the difference between '' and ""
+			in <a href=''> and <a href="">
+			"" will output this error in the browser:
+				parse error: syntax error, unexpected '$url' (T_VARIABLE)
+			you can also escape "" by preceeding them with the backslash \"
+			*/
+			//echo "<li><a href=\"$url\">$name</a></li>";
+		}
+
+		?>
+	</ul>
+</body>
+</html>

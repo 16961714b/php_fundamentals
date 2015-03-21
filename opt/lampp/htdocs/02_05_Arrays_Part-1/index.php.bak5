@@ -1,0 +1,27 @@
+<?php
+//$tuts_sites = array('nettuts+', 'psdtuts+', 'webdesigntuts+', 'wptuts+', 'mobiletuts+');
+//$tuts_sites = ['nettuts+', 'psdtuts+', 'webdesigntuts+', 'wptuts+', 'mobiletuts+'];
+$tuts_sites = array(
+	'nettuts' => 'http://net.tutsplus.com/',
+	'psdtuts' => 'http://psd.tutsplus.com/',
+	'wptuts' => 'http://wp.tutsplus.com/',
+//thit is an associative array - connecting the name of tuts sites to its urls
+);
+
+?>
+
+<html>
+<head>
+	<title>Arrays</title>
+</head>
+<body>
+	<h1>Tuts+ Sites</h1>
+	<ul>
+		<?php foreach($tuts_sites as $site) {
+			echo "<li>$site</li>";
+			
+		}
+		?>
+	</ul>
+</body>
+</html>

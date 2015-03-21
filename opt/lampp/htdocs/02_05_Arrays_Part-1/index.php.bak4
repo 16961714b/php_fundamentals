@@ -1,0 +1,33 @@
+<?php
+/* this is a traditional syntaxt working on php 5.3 and less 
+$tuts_sites = array('nettuts+', 'psdtuts+', 'webdesigntuts+', 'wptuts+', 'mobiletuts+');
+*/
+$tuts_sites = array('nettuts+', 'psdtuts+', 'webdesigntuts+', 'wptuts+', 'mobiletuts+');
+/* this is a modern syntaxt working on php 5.4 and above 
+$tuts_sites = ['nettuts+', 'psdtuts+', 'webdesigntuts+', 'wptuts+', 'mobiletuts+'];
+*/
+//$tuts_sites = ['nettuts+', 'psdtuts+', 'webdesigntuts+', 'wptuts+', 'mobiletuts+'];
+?>
+
+<html>
+<head>
+	<title>Arrays</title>
+</head>
+<body>
+	<h1>Tuts+ Sites</h1>
+	<ul>
+		<?php foreach($tuts_sites as $site) {
+			echo "<li>$site</li>";
+			/*NOTICE the difference between the output of:
+				echo "<li>$site</li>"
+			"" which prints out the items within the $tuts_sites array
+			and
+				echo '<li>$site</li>'
+			'' which echos only the string '$site' 5 times
+			echo command is looping through the items in the array
+			*/
+		}
+		?>
+	</ul>
+</body>
+</html>

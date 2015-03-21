@@ -1,0 +1,56 @@
+<?php
+$tuts_sites = array(
+	'nettuts' => 'http://net.tutsplus.com/',
+	'psdtuts' => 'http://psd.tutsplus.com/',
+	'wptuts' => 'http://wp.tutsplus.com/',
+);
+?>
+
+<html>
+<head>
+	<title>Arrays</title>
+</head>
+<body>
+	<h1>Tuts+ Sites</h1>
+	<ul>
+		<?php 
+
+		// foreach($tuts_sites as $site) {
+		// 	echo "<li>$site</li>";
+		// }
+
+		// foreach ($tuts_sites as $name => $url) {
+		// 	echo "<li><a href='$url'>" . ucwords($name) . "+</a></li>";
+		// }
+
+		//An alternative way to display the strings:
+		foreach ($tuts_sites as $name => $url) : ?>
+			<li>
+				<a href="<?php echo $url; ?>"><?php echo $name; ?></a>
+			</li>
+		<?php endforeach ?>
+		
+		<!-- We are adding a foreach, using a short-hand syntax,
+		closing php with
+			?>
+		then echoing our list items with
+			<li> </li>
+		opening php as needed:
+			<a href="<?php echo $url; ?>">
+			<?php echo $name; ?></a>
+		Finally, we need to specify we are done with the foreach,
+		telling php we are done looping:
+			endforeach ?> -->
+
+		<?php
+		/*
+		In php 5.4 and above you can change php echo into <?=
+		*/
+		foreach ($tuts_sites as $name => $url) : ?>
+			<li>
+				<a href="<?= $url; ?>"><?= $name; ?></a>
+			</li>
+		<?php endforeach ?>
+	</ul>
+</body>
+</html>

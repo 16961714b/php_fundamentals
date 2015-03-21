@@ -1,0 +1,35 @@
+<?php
+
+$tuts_sites = array('nettuts+', 'psdtuts+', 'webdesigntuts+', 'wptuts+');
+/*
+tutsSites - camelCasing for JavaScript
+tuts-sites - dash for html
+*/
+print_r($tuts_sites);
+/*
+you can also use:
+	var_dump($tuts_sites);
+instear of:
+	print_r($tuts_sites);
+*/
+/*
+var_dump($); gives you more information,
+although it is less readable then print_r($);
+*/
+/*
+if you are dealing with objects or arrays use:
+	var_dump($); or print_r($);
+for simply printing out a string use:
+	echo '$tuts_sites';
+*/
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+</head>
+<body>
+	<h1>Arrays</h1>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<?php
+$tuts_sites = array(
+	/*
+	To Capitalize you could Capitalize each of the items e.g. 'Nettuts'
+	but you can also use one of many php functions; see line 28
+	*/
+	'nettuts' => 'http://net.tutsplus.com/',
+	'psdtuts' => 'http://psd.tutsplus.com/',
+	'wptuts' => 'http://wp.tutsplus.com/',
+);
+?>
+
+<html>
+<head>
+	<title>Arrays</title>
+</head>
+<body>
+	<h1>Tuts+ Sites</h1>
+	<ul>
+		<?php 
+
+		// foreach($tuts_sites as $site) {
+		// 	echo "<li>$site</li>";
+		// }
+
+		foreach ($tuts_sites as $name => $url) {
+			//echo "<li><a href=\"$url\">$name</a></li>";
+			//echo "<li><a href=\"$url\">" . ucwords($name) . "</a></li>";
+			/*
+			To Capitalize every word in the provided strings:
+			close up the string with "
+				echo "<li><a href=\"$url\">"
+			concatinate . with a php built-in function
+				. ucwords($name)
+			and then concatinate . " the rest of the html fragment
+				. "</a></li>";
+			*/
+			/*
+			To add plus + at the end of the strings 'Nettuts+'
+			just add it to the last html fragment
+				. "+</a></li>";
+			*/
+			//echo "<li><a href=\"$url\">" . ucwords($name) . "+</a></li>";
+			/*
+			For a more readable code, it is better to use '' instead of \" \"
+			*/
+			echo "<li><a href='$url'>" . ucwords($name) . "+</a></li>";
+		}
+
+		?>
+	</ul>
+</body>
+</html>
